@@ -1,0 +1,17 @@
+Very nice, I like the way you've managed to do the task. It is innovative and no one made it like you :))
+
+I like it, but there is small problem with this approach, because when you click several times on the same button, you get
+different picture, this is strange behavior. Other than that everything seems really nice, here you can check Andrey's 
+homework and see how he managed to do the task, it's simple and straightforward.
+
+    changeImage(event) {
+        this.setState({imageUrl: event.target.getAttribute('data-image-url')})
+    }
+    
+    <Button name="Image One" imageChangeHandler={this.changeImage} imageUrl="https://img.rasset.ie/0010809f-500.jpg"/>
+    
+    const Button = ({ name, imageChangeHandler, imageUrl }) => {
+      return (
+          <button onClick={imageChangeHandler} data-image-url={imageUrl}>{name}</button>
+      )
+    }
